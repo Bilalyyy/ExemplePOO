@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExemplePOO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rX-9R-12N" customClass="UserView" customModule="ExemplePOO" customModuleProvider="target">
+                                <rect key="frame" x="40" y="137" width="334" height="685"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenom et nom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cje-eL-D5D">
+                                        <rect key="frame" x="8" y="8" width="318" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="emC-sg-wWD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mario" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-Rt-v9V" customClass="RoundedImage" customModule="ExemplePOO" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="63" width="318" height="318"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Rpr-Rt-v9V" secondAttribute="height" id="ej4-ZZ-HY1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-0s-hpK">
+                                        <rect key="frame" x="8" y="644" width="318" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="dOr-qG-Yvo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="Rpr-Rt-v9V" firstAttribute="top" secondItem="Cje-eL-D5D" secondAttribute="bottom" constant="15" id="0Km-Wc-ZfE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rpr-Rt-v9V" secondAttribute="trailing" constant="8" id="68j-vd-d8p"/>
+                                    <constraint firstItem="Rpr-Rt-v9V" firstAttribute="leading" secondItem="5rX-9R-12N" secondAttribute="leading" constant="8" id="7dS-bG-jvC"/>
+                                    <constraint firstAttribute="bottom" secondItem="k6a-0s-hpK" secondAttribute="bottom" constant="20" id="Asb-lc-Mg1"/>
+                                    <constraint firstItem="Cje-eL-D5D" firstAttribute="leading" secondItem="5rX-9R-12N" secondAttribute="leading" constant="8" id="EAh-BC-QIH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cje-eL-D5D" secondAttribute="trailing" constant="8" id="KmR-gr-FVY"/>
+                                    <constraint firstItem="k6a-0s-hpK" firstAttribute="leading" secondItem="5rX-9R-12N" secondAttribute="leading" constant="8" id="LCN-MC-fAZ"/>
+                                    <constraint firstItem="k6a-0s-hpK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Rpr-Rt-v9V" secondAttribute="bottom" constant="15" id="NBV-QC-4Jd"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6a-0s-hpK" secondAttribute="trailing" constant="8" id="hR3-hS-eb6"/>
+                                    <constraint firstItem="Cje-eL-D5D" firstAttribute="top" secondItem="5rX-9R-12N" secondAttribute="top" constant="8" id="veI-64-aJf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="raduis">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bordercolor">
+                                        <color key="value" red="0.33708929739999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="ageLbl" destination="k6a-0s-hpK" id="h9A-re-eDc"/>
+                                    <outlet property="imageV" destination="Rpr-Rt-v9V" id="CcO-BA-KzY"/>
+                                    <outlet property="nameLbl" destination="Cje-eL-D5D" id="sRR-Kg-drC"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qVV-Va-ZTq">
+                                <rect key="frame" x="40" y="59" width="334" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="et" translatesAutoresizingMaskIntoConstraints="NO" id="1CG-Xy-xBJ" customClass="RoundedImage" customModule="ExemplePOO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AH7-Ys-d3B"/>
+                                            <constraint firstAttribute="width" constant="60" id="kjL-y4-YgB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="VT1-3f-wWd" customClass="RoundedImage" customModule="ExemplePOO" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="DJB-3h-YLe"/>
+                                            <constraint firstAttribute="height" constant="60" id="tpS-9f-EOq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevalier" translatesAutoresizingMaskIntoConstraints="NO" id="fbS-hV-adR" customClass="RoundedImage" customModule="ExemplePOO" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="5XO-Zf-XPO"/>
+                                            <constraint firstAttribute="height" constant="60" id="NQE-GS-gs6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pluto" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-aE-CRA" customClass="RoundedImage" customModule="ExemplePOO" customModuleProvider="target">
+                                        <rect key="frame" x="274" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="htK-iW-mZ3"/>
+                                            <constraint firstAttribute="width" constant="60" id="zKd-vM-cR0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qVV-Va-ZTq" secondAttribute="trailing" constant="40" id="9fH-g2-JDr"/>
+                            <constraint firstItem="qVV-Va-ZTq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="VED-iQ-nRm"/>
+                            <constraint firstItem="5rX-9R-12N" firstAttribute="top" secondItem="qVV-Va-ZTq" secondAttribute="bottom" constant="18" id="ZBN-4p-Txc"/>
+                            <constraint firstItem="qVV-Va-ZTq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="g16-lr-EZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5rX-9R-12N" secondAttribute="trailing" constant="40" id="iw3-TJ-xdS"/>
+                            <constraint firstItem="5rX-9R-12N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="khT-oZ-op4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5rX-9R-12N" secondAttribute="bottom" constant="40" id="vAM-n5-wlZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainView" destination="5rX-9R-12N" id="Ouu-2q-8Xp"/>
+                        <outletCollection property="topImages" destination="1CG-Xy-xBJ" collectionClass="NSMutableArray" id="To0-HW-tOP"/>
+                        <outletCollection property="topImages" destination="VT1-3f-wWd" collectionClass="NSMutableArray" id="SpO-KK-osN"/>
+                        <outletCollection property="topImages" destination="fbS-hV-adR" collectionClass="NSMutableArray" id="bzh-kX-yk5"/>
+                        <outletCollection property="topImages" destination="i3c-aE-CRA" collectionClass="NSMutableArray" id="HTY-x7-0zf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevalier" width="640" height="426"/>
+        <image name="et" width="640" height="960"/>
+        <image name="mario" width="640" height="426"/>
+        <image name="pluto" width="640" height="426"/>
+        <image name="robot" width="640" height="960"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
